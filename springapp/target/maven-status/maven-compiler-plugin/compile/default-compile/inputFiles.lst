@@ -1,0 +1,15 @@
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Repository/UserRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Controller/AuthController.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Controller/AdminController.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Repository/CourseRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/InstituteModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/StudentModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/SpringappApplication.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/UserModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/CourseModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/AdminModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Controller/UserController.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Model/LoginModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Repository/StudentRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Repository/InstituteRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/Repository/AdminRepository.java

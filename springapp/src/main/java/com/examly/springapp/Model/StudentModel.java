@@ -6,9 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- */
+
 @Entity
 @Table(name="Student")
 public class StudentModel {
@@ -24,7 +22,7 @@ public class StudentModel {
 
 	public StudentModel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public StudentModel(int studentId, String studentName, String studentDob, String address, String mobile, int age) {

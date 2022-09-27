@@ -1,6 +1,5 @@
-/**
- * 
- */
+
+
 package com.examly.springapp.model;
 
 import javax.persistence.Entity;
@@ -9,9 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- */
 @Entity
 @Table(name = "ADMIN")
 public class AdminModel {
@@ -26,7 +22,7 @@ public class AdminModel {
 
 	public AdminModel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public AdminModel(String email, String password, String phoneNumber, String userRole) {

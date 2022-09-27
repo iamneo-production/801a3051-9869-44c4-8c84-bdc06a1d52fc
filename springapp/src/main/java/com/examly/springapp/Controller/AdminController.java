@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.examly.springapp.Controller;
 
 import java.util.List;
@@ -19,9 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.Model.*;
 import com.examly.springapp.Repository.*;
 
-/**
- *
- */
+
 @RestController
 @RequestMapping("admin")
 public class AdminController {
@@ -46,7 +42,7 @@ public class AdminController {
 				return "Unable to add the course";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while adding the course";
 		}
 
@@ -75,7 +71,7 @@ public class AdminController {
 				return "Unable to update the course";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while updating the course";
 		}
 
@@ -104,7 +100,7 @@ public class AdminController {
 				return "Unable to add the Institute";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while adding the Institute";
 		}
 
@@ -135,7 +131,7 @@ public class AdminController {
 				return "Unable to update the Institute";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while updating the Institute";
 		}
 
@@ -147,7 +143,7 @@ public class AdminController {
 			instituteRepo.deleteById(courseId);
 			return "Institute Deleted Successfully";
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while deleting the Institute";
 		}
 	}
@@ -163,7 +159,7 @@ public class AdminController {
 				return "Unable to add the Student";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while adding the Student";
 		}
 
@@ -194,7 +190,7 @@ public class AdminController {
 				return "Unable to update the Student";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while updating the Student";
 		}
 
@@ -206,7 +202,7 @@ public class AdminController {
 			studentRepo.deleteById(courseId);
 			return "Student Deleted Successfully";
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while deleting the Student";
 		}
 	}

@@ -6,9 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- */
+
 @Entity
 @Table(name = "USER")
 public class UserModel {
@@ -79,7 +77,6 @@ public class UserModel {
 
 	public UserModel() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
+		
 
 }

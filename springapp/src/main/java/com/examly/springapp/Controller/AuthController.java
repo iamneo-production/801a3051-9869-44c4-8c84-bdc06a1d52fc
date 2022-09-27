@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.examly.springapp.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.Model.*;
 import com.examly.springapp.Repository.*;
 
-/**
- *
- */
 @RestController
 public class AuthController {
 

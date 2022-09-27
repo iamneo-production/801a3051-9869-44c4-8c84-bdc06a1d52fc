@@ -6,9 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- */
+
 @Entity
 @Table(name = "Institute")
 public class InstituteModel {
@@ -24,7 +22,7 @@ public class InstituteModel {
 
 	public InstituteModel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public InstituteModel(int instituteId, String instituteName, String instituteDescription, String instituteAddress,

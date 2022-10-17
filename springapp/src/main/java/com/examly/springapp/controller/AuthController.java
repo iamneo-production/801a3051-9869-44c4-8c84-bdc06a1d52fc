@@ -1,5 +1,4 @@
-
-package com.examly.springapp.Controller;
+package com.examly.springapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapp.Model.*;
-import com.examly.springapp.Repository.*;
+import com.examly.springapp.model.*;
+import com.examly.springapp.repository.*;
 
 @RestController
 public class AuthController {
@@ -19,7 +18,7 @@ public class AuthController {
 	@Autowired
 	private AdminRepository adminRepo;
 
-	@GetMapping(value = "user/login")
+	@GetMapping(value = "/user/login")
 	public boolean isUserPresent(@RequestBody LoginModel loginBean) {
 		if (loginBean.getEmail() != null && loginBean.getPassword() != null) {
 			UserModel user = userRepo.logginInUser(loginBean.getEmail(), loginBean.getPassword());
@@ -31,7 +30,7 @@ public class AuthController {
 
 	}
 
-	@GetMapping(value = "admin/login")
+	@GetMapping(value = "/admin/login")
 	public boolean isAdminPresent(@RequestBody LoginModel loginBean) {
 		if (loginBean.getEmail() != null && loginBean.getPassword() != null) {
 			return loginBean.getEmail().equalsIgnoreCase("admin") && loginBean.getPassword().equals("admin") ? true
@@ -60,7 +59,7 @@ public class AuthController {
 		}
 	}
 
-	@PostMapping(value = "admin/signup")
+	@PostMapping(value = "/admin/signup")
 	public String saveAdmin(@RequestBody AdminModel bean) {
 		try {
 

@@ -1,5 +1,5 @@
 
-package com.examly.springapp.Controller;
+package com.examly.springapp.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapp.Model.*;
-import com.examly.springapp.Repository.*;
+import com.examly.springapp.model.*;
+import com.examly.springapp.repository.*;
 
 
 @RestController
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
@@ -31,7 +31,7 @@ public class AdminController {
 	@Autowired
 	private StudentRepository studentRepo;
 
-	@PostMapping("addCourse")
+	@PostMapping("/addCourse")
 	public String addCourse(@RequestBody CourseModel courseBean) {
 		try {
 			if (courseBean.getCourseName() != null && courseBean.getCourseDuration() > 0
@@ -48,14 +48,14 @@ public class AdminController {
 
 	}
 
-	@GetMapping("viewCourse")
+	@GetMapping("/viewCourse")
 	public List<CourseModel> viewCourse() {
 
 		return courseRepo.findAll();
 
 	}
 
-	@PutMapping("editCourse/{courseId}")
+	@PutMapping("/editCourse/{courseId}")
 	public String editCourse(@PathVariable("courseId") int courseId, @RequestBody CourseModel course) {
 		try {
 			Optional<CourseModel> presentCourse = courseRepo.findById(courseId);
@@ -77,18 +77,18 @@ public class AdminController {
 
 	}
 
-	@DeleteMapping("deleteCourse/{courseId}")
+	@DeleteMapping("/deleteCourse/{courseId}")
 	public String deleteCourse(@PathVariable("courseId") int courseId) {
 		try {
 			courseRepo.deleteById(courseId);
 			return "Course Deleted Successfully";
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			return "Exception occured while deleting the course";
 		}
 	}
 
-	@PostMapping("addInstitute")
+	@PostMapping("/addInstitute")
 	public String addCourse(@RequestBody InstituteModel instituteBean) {
 		try {
 			if (instituteBean.getEmail() != null && instituteBean.getInstituteAddress() != null
@@ -106,14 +106,14 @@ public class AdminController {
 
 	}
 
-	@GetMapping("viewInstitute")
+	@GetMapping("/viewInstitute")
 	public List<InstituteModel> viewInstitute() {
 
 		return instituteRepo.findAll();
 
 	}
 
-	@PutMapping("editInstitute/{instituteId}")
+	@PutMapping("/editInstitute/{instituteId}")
 	public String editInstitute(@PathVariable("courseId") int courseId, @RequestBody InstituteModel institute) {
 		try {
 			Optional<InstituteModel> presentInstitute = instituteRepo.findById(courseId);
@@ -137,7 +137,7 @@ public class AdminController {
 
 	}
 
-	@DeleteMapping("deleteInstitute/{instituteId}")
+	@DeleteMapping("/deleteInstitute/{instituteId}")
 	public String deleteInstitute(@PathVariable("instituteId") int courseId) {
 		try {
 			instituteRepo.deleteById(courseId);
@@ -148,7 +148,7 @@ public class AdminController {
 		}
 	}
 
-	@PostMapping("addStudent")
+	@PostMapping("/addStudent")
 	public String addStudent(@RequestBody StudentModel studenBean) {
 		try {
 			if (studenBean.getAge() > 5 && studenBean.getAddress() != null && studenBean.getStudentDob() != null
@@ -165,14 +165,14 @@ public class AdminController {
 
 	}
 
-	@GetMapping("viewStudent")
+	@GetMapping("/viewStudent")
 	public List<StudentModel> viewStudent() {
 
 		return studentRepo.findAll();
 
 	}
 
-	@PutMapping("editStudent/{studentId}")
+	@PutMapping("/editStudent/{studentId}")
 	public String editInstitute(@PathVariable("studentId") int courseId, @RequestBody StudentModel student) {
 		try {
 			Optional<StudentModel> presentInstitute = studentRepo.findById(courseId);
@@ -196,7 +196,7 @@ public class AdminController {
 
 	}
 
-	@DeleteMapping("deleteStudent/{studentId}")
+	@DeleteMapping("/deleteStudent/{studentId}")
 	public String deleteStudent(@PathVariable("studentId") int courseId) {
 		try {
 			studentRepo.deleteById(courseId);
